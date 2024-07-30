@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Контакти</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Контакти</h1>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="pricelist.html">Прайс-лист</a>
+        <a href="contact.html" class="active">Контакти</a>
+      </nav>
+    </header>
+    <main class="contact-main">
+      <section class="contact-form">
+        <h2>Зв'яжіться з нами!</h2>
+        <form action="submit_form.php" method="post">
+          <input type="text" name="name" placeholder="Ім'я" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea
+            name="message"
+            placeholder="Повідомлення"
+            required
+          ></textarea>
+          <button type="submit">Відправити</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 Майстер зачісок. Всі права захищені.</p>
+    </footer>
+  </body>
+</html>

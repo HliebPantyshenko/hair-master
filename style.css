@@ -1,0 +1,131 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf0; /* світло-рожевий фон */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #fffaf0;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #ffefd5; /* персиковий для акценту при наведенні */
+  color: #333;
+}
+
+.introduction p {
+  text-align: center;
+  font-variant: small-caps; /* прописний шрифт */
+  background: #ffb6c1; /* ніжно-рожевий фон */
+  padding: 20px;
+  border-radius: 8px; /* заокруглені кути */
+  margin: 20px auto; /* відцентровка */
+  width: fit-content;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.gallery figure {
+  margin: 20px;
+  text-align: center;
+  background: #fffaf0; /* кремовий фон для фігур */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border: 2px solid #ffb6c1; /* рамка ніжно-рожевого кольору */
+  border-radius: 8px;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fffaf0; /* кремовий фон для таблиці */
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ffefd5; /* персиковий */
+  text-align: left;
+}
+
+th {
+  background-color: #ffb6c1; /* ніжно-рожевий для заголовків */
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: white;
+  font-size: 0.9em;
+  margin-top: auto; /* Забезпечує, що футер завжди буде внизу сторінки */
+}
+
+.contact-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  background: #fffaf0; /* кремовий фон */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ffb6c1; /* ніжно-рожевий */
+  border-radius: 4px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ff69b4; /* яскраво-рожевий при наведенні */
+}
