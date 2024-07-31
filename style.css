@@ -135,16 +135,119 @@ nav a:hover {
 
 /* Перший медіа-запит */
 @media (min-width: 772px) {
-  .gallery div {
+  .gallery figure {
     width: 45vw;
     display: inline-block;
+  }
+
+  .gallery img {
+    max-height: 30vh;
   }
 }
 
 /* Другий медіа-запит */
 @media (min-width: 998px) {
-  .gallery div {
+  .gallery figure {
     width: 30vw;
   }
 }
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf0; /* світло-рожевий фон */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: #ffffff;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #fffaf0;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #ffefd5; /* персиковий для акценту при наведенні */
+  color: #333;
+}
+
+.introduction p {
+  text-align: center;
+  font-variant: small-caps; /* прописний шрифт */
+  background: #ffb6c1; /* ніжно-рожевий фон */
+  padding: 20px;
+  border-radius: 8px; /* заокруглені кути */
+  margin: 20px auto; /* відцентровка */
+  width: fit-content;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.gallery figure {
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  width: calc(33.333% - 20px);
+  height: calc(33.333% - 20px);
+  text-align: center;
+  background: #fffaf0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Для обрезки изображения, выходящего за границы */
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  display: flex; /* Центрируем изображение */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+  object-fit: cover; /* Заполнение без искажений */
+}
+
+/* Перший медіа-запит */
+@media (min-width: 772px) {
+  .gallery figure {
+    width: 45vw;
+    height: 45vw; /* Для квадратного виду зробимо ширину і висоту однаковими */
+  }
+}
+
+/* Другий медіа-запит */
+@media (min-width: 998px) {
+  .gallery figure {
+    width: 30vw;
+    height: 30vw; /* Для квадратного виду зробимо ширину і висоту однаковими */
+  }
+}
+
 
