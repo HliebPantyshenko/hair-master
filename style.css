@@ -1,3 +1,70 @@
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fffaf0; /* кремовий фон для таблиці */
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ffefd5; /* персиковий */
+  text-align: left;
+}
+
+th {
+  background-color: #ffb6c1; /* ніжно-рожевий для заголовків */
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: white;
+  font-size: 0.9em;
+  margin-top: auto; /* Забезпечує, що футер завжди буде внизу сторінки */
+}
+
+.contact-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  background: #fffaf0; /* кремовий фон */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ffb6c1; /* ніжно-рожевий */
+  border-radius: 4px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background: #ffb6c1; /* ніжно-рожевий */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ff69b4; /* яскраво-рожевий при наведенні */
+}
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -66,107 +133,18 @@ nav a:hover {
   object-fit: cover; /* Збереження пропорцій */
 }
 
-table {
-  width: 100%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  background: #fffaf0; /* кремовий фон для таблиці */
-}
-
-th,
-td {
-  padding: 12px;
-  border: 1px solid #ffefd5; /* персиковий */
-  text-align: left;
-}
-
-th {
-  background-color: #ffb6c1; /* ніжно-рожевий для заголовків */
-  color: #ffffff;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #ffb6c1; /* ніжно-рожевий */
-  color: white;
-  font-size: 0.9em;
-  margin-top: auto; /* Забезпечує, що футер завжди буде внизу сторінки */
-}
-
-.contact-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-form {
-  width: 300px;
-  margin: auto;
-  padding: 20px;
-  background: #fffaf0; /* кремовий фон */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ffb6c1; /* ніжно-рожевий */
-  border-radius: 4px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  background: #ffb6c1; /* ніжно-рожевий */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: #ff69b4; /* яскраво-рожевий при наведенні */
-}
-
-/* Tablet View */
-@media (max-width: 772px) {
-  header,
-  footer {
-    padding: 15px 5px;
-  }
-
-  .gallery figure {
-    width: 45%; /* 45% ширини вікна перегляду */
-    max-width: 45%;
-  }
-
-  .gallery img {
-    max-height: 30vh; /* не більше 30% висоти вікна перегляду */
-  }
-
-  table {
-    width: 90%; /* 90% ширини вікна перегляду */
+/* Перший медіа-запит */
+@media (min-width: 772px) {
+  .gallery div {
+    width: 45vw;
+    display: inline-block;
   }
 }
 
-/* Wide View */
-@media (min-width: 772px) and (max-width: 998px) {
-  header,
-  footer {
-    padding: 18px 8px;
-  }
-
-  .gallery figure {
-    flex: 1 1 calc(33.333% - 20px); /* Три зображення в рядку */
-    max-width: calc(33.333% - 20px);
-  }
-
-  table {
-    width: 90%; /* 90% ширини вікна перегляду */
+/* Другий медіа-запит */
+@media (min-width: 998px) {
+  .gallery div {
+    width: 30vw;
   }
 }
+
